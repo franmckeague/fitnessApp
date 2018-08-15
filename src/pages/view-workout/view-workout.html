@@ -1,0 +1,20 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ workoutData }}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addExercise(this.workoutData)"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+      <ion-card *ngFor="let list of exerciseNameList; let i=index" (click)="addWorkoutData(list, i)">
+        <ion-card-header>
+            {{ list }}
+        </ion-card-header>
+      </ion-card>
+</ion-content>

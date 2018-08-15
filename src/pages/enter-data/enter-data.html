@@ -1,0 +1,31 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ this.enterData }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-label fixed>Set</ion-label>
+        <ion-input name="set" [(ngModel)]="set" type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Weight (kgs)</ion-label>
+        <ion-input name="weight" [(ngModel)]="weight" type="number" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>Reps</ion-label>
+        <ion-input name="reps" [(ngModel)]="reps" type="number" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+  <p>
+    <button ion-button (click)="saveSet(set)" (click)="saveWeight(weight)" (click)="saveReps(reps)" color="primary" style="float: right">
+        Save
+    </button>
+  </p>
+</ion-content>

@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Select Body Part</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let exercises of bodyPartList; let i=index" (click)="bodyPartClicked(exercises, i)" detail-push no-lines>
+          {{exercises.name}}
+        </button>
+      </ion-list>
+</ion-content>

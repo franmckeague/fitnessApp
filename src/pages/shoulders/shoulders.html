@@ -1,0 +1,17 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ this.exerciseInfo.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let i of this.exerciseInfo.subName" (click)="viewData(i)" no-lines detail-push>
+      {{ i.ex }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Create Workout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+     <ion-list>
+        <ion-item>
+            <ion-label color="primary">Workout Name</ion-label>
+            <ion-input name="workoutName" [(ngModel)]="workoutName" placeholder="Enter workout name"></ion-input>
+          </ion-item>
+     </ion-list>
+     <p>
+      <button ion-button (click)="save(workoutName)" color="primary" style="float: right">
+        Save Workout
+      </button>
+     </p>
+</ion-content>
